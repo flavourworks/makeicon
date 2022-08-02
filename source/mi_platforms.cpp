@@ -217,7 +217,7 @@ int make_icon_apple(const Options& options, std::vector<Image>& input_images)
     std::filesystem::path output_directory = options.output;
     if(!std::filesystem::exists(output_directory))
     {
-        std::filesystem::create_directory(output_directory);
+        std::filesystem::create_directories(output_directory);
     }
     
     // iterate over the lines of json and find parameters for resizing and saving the images
@@ -293,7 +293,7 @@ int make_icon_android(const Options& options, std::vector<Image>& input_images)
     std::filesystem::path output_directory = options.output;
     if(!std::filesystem::exists(output_directory))
     {
-        std::filesystem::create_directory(output_directory);
+        std::filesystem::create_directories(output_directory);
     }
     
     for(int i = 0; i < 5; ++i)
